@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    height: 100vh;
+    color: whitesmoke;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App h1 {
+    margin: 50px auto;
+}
+
+form {
+width: 600px;
+display: flex;
+justify-content: center;
+gap:30px;
+margin-bottom: 50px;
+}
+
+form .input{
+    background: whitesmoke;
+    padding:7px;
+    border-radius: 10px;
+    transition: ease 0.7s all;
+}
+
+form .input_text{
+    border:none;
+    background: whitesmoke;
+    outline:none;
+    padding-left: 5px;
+    min-width: 200px;
+}
+
+form button {
+    border:none;
+    background: whitesmoke;
+}
+
+.filter{
+    border-radius: 10px;
+    border: none;
+    padding: 9px;
+    background-color: whitesmoke;
+}
+
+.container_todoList{
+    display: flex;
+    min-width: 600px;
+    justify-content: center;
+    color:black;
+    font-size: 15px;
+}
+
+.todoList{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    background-color: whitesmoke;
+    padding: 4px 20px;
+    width: 350px;
+    border-radius: 9px;
+    margin-bottom: 5px;
+}
+
+.task .nameTask{
+    padding-right: 30px; 
+    flex:1
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #252525;
+    border-radius: 3px;
+    display: grid;
+    place-content: center;
+}
+
+input[type='checkbox']::before{
+    content:"";
+    width: 9px;
+    height: 9px;
+    box-shadow: inset 1em 1em #03b4a8;
+    border-radius: 2px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+}
+input[type='checkbox']:checked::before{
+    transform: scale(1);
+}
+
+.btn-delete{
+    border:none;
+    background-color: whitesmoke;
+    transition: ease 0.1s all;
+}
+
+.btn-delete:hover{
+    color:rgb(202, 11, 11);
+    transform: scale(1.3);
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.3;
+}
